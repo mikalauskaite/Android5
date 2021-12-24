@@ -13,7 +13,7 @@ public class DataManager {
     private static String TAG="DataManager class";
 
     public static ArrayList<String> getRateFromECB() throws IOException {
-        Log.i(TAG, "getRateFromECM method was called");
+        Log.i(TAG, "buvo iškviestas getRateFromECM metodas");
         ArrayList<String> rate;
         InputStream stream=downloadUrl ( Constants.RATES_URL);
         try {
