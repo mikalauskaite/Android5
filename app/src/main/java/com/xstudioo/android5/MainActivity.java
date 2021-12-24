@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
-        Log.i(TAG, "onCreate method was called");
+        Log.i(TAG, "buvo iškviestas onCreate metodas");
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_main );
 
@@ -27,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint( "StaticFieldLeak" )
     @Override
     protected void onStart ( ) {
-        Log.i(TAG, "onStart method was called");
+        Log.i(TAG, "buvo iškviestas onStart metodas");
         super.onStart ( );
 
         new DataLoader (){
             @Override
             public void onPostExecute( ArrayList<String> result){
-                Log.i("DataLoader class", "onPostExecute method was called");
+                Log.i("DataLoader class", "buvo iškviestas onPostExecute metodas");
                 ArrayAdapter<String> adapter = new ArrayAdapter <> ( getApplicationContext (), android.R.layout.simple_list_item_1, result );
                 currency.setAdapter ( adapter );
 

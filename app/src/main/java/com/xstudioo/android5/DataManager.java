@@ -28,11 +28,11 @@ public class DataManager {
     }
 
     private static InputStream downloadUrl( String urlString) throws IOException {
-        Log.i(TAG, "downloadUrl method was called");
+        Log.i(TAG, "buvo iškviestas downloadUrl metodas");
         URL url = new URL (urlString);
         HttpURLConnection conn = ( HttpURLConnection ) url.openConnection ();
-        conn.setReadTimeout(10000);
-        conn.setConnectTimeout(15000);
+        conn.setReadTimeout(1000);
+        conn.setConnectTimeout(500);
         conn.setRequestMethod("GET");
         conn.setDoInput(true);
         conn.connect();

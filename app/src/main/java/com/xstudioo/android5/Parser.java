@@ -20,7 +20,7 @@ public class Parser {
     private static String TAG="XmlParser class";
 
     public static ArrayList<String> getRateFromECB( InputStream stream ) throws IOException {
-        Log.i(TAG, "getRateFromECB method was created");
+        Log.i(TAG, "buvo iškviestas getRateFromECB metodas");
        ArrayList <String> result = new ArrayList <> (  );
         String currencyName;
         try {
@@ -37,10 +37,10 @@ public class Parser {
                 }
             }
         } catch ( ParserConfigurationException e ){
-            Log.e(TAG, "getRateFromECB method failed");
+            Log.e(TAG, "nepavyko atlikti getRateFromECB metodo");
             e.printStackTrace ();
         } catch ( SAXException e ){
-            Log.e(TAG, "getRateFromECB method failed");
+            Log.e(TAG, "nepavyko atlikti getRateFromECB metodo");
             e.printStackTrace ();
         }
         return result;
